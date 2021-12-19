@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetIntegration">
-        <activity android:name=".Home"></activity>
+        <activity android:name=".PanierActivity"></activity>
+        <activity android:name=".Home" />
         <activity android:name=".ForgetPass" />
         <activity android:name=".Singup" />
         <activity

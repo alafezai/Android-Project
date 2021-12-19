@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -25,6 +26,7 @@ public class Home extends AppCompatActivity {
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.setting));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.setting));
         bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.accont));
+        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_baseline_shopping_cart_24));
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
@@ -42,6 +44,10 @@ public class Home extends AppCompatActivity {
                     case 4:
                         fragment = new ProfilFragment();
                         break;
+                    case 5:
+                        startActivity(new Intent(getApplicationContext(),PanierActivity.class));
+                        break;
+
                 }
                 loadFragment(fragment);
             }
