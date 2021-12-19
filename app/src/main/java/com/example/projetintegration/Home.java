@@ -40,7 +40,7 @@ public class Home extends AppCompatActivity {
                         fragment = new CategorieFragment();
                         break;
                     case 4:
-                        fragment = new CategorieFragment();
+                        fragment = new ProfilFragment();
                         break;
                 }
                 loadFragment(fragment);

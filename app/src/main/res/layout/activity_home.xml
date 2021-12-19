@@ -23,10 +23,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:mbn_backgroundBottomColor="#2196F3"
+        app:mbn_backgroundBottomColor="#1566E0"
         app:mbn_countBackgroundColor="#ff6f00"
         app:mbn_countTextColor="@color/white"
-        app:mbn_selectedIconColor="#2196F3"
+        app:mbn_selectedIconColor="#1566E0"
         tools:ignore="MissingConstraints" />
 
 
