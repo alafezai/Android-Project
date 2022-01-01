@@ -80,15 +80,17 @@ public class HomeFragment extends Fragment {
         ImageView img;
 
 
-        ProductModel p1 = new ProductModel("Sweat à Capuche",400,R.drawable.manteau);
+       /* ProductModel p1 = new ProductModel("Sweat à Capuche",400,R.drawable.manteau);
         ProductModel p2 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
         ProductModel p3 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
-        ProductModel p4 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
+        ProductModel p4 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);*/
         Context context;
-        products.add(p1);
+     /*   products.add(p1);
         products.add(p2);
         products.add(p3);
-        products.add(p4);
+        products.add(p4);*/
+
+
          myrecy = rootView.findViewById(R.id.recl);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
         myrecy.setLayoutManager(gridLayoutManager);
