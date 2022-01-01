@@ -16,8 +16,8 @@
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
         android:id="@+id/bottom_navigation"
         android:layout_width="415dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="3dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="-6dp"
         android:foregroundGravity=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

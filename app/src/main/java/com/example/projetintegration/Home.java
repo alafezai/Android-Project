@@ -18,7 +18,7 @@ public class Home extends AppCompatActivity {
 
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.home));
-        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.setting));
+        bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_baseline_dashboard_24));
         bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.accont));
         bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.ic_baseline_shopping_cart_24));
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
@@ -43,8 +43,7 @@ public class Home extends AppCompatActivity {
                 loadFragment(fragment);
             }
         });
-        bottomNavigation.setCount(1,"10");
-        bottomNavigation.show(2,true);
+        bottomNavigation.show(1,true);
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
