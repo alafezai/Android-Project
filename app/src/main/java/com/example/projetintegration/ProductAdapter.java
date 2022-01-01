@@ -21,16 +21,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.rcyview>
         ProductAdapter myadapter;
         public rcyview(@NonNull View view, ProductAdapter Prroductradapter) {
             super(view);
-            descr = view.findViewById(R.id.desc);
-            price = view.findViewById(R.id.price);
-            image = view.findViewById(R.id.imageView);
+            descr = view.findViewById(R.id.product_name);
+            price = view.findViewById(R.id.product_price);
+            image = view.findViewById(R.id.product_image);
 
         }
     }
-    ArrayList<Product> products;
+    ArrayList<ProductModel> products;
 
    Context contex;
-    public  ProductAdapter(ArrayList<Product> products, Context context){
+    public  ProductAdapter(ArrayList<ProductModel> products, Context context){
         this.products = products;
         this.contex = context;
     }

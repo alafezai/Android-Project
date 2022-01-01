@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.projetintegration">
+    package="com.example.projetintegration" >
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProjetIntegration">
-        <activity android:name=".PanierActivity"></activity>
+        android:theme="@style/Theme.ProjetIntegration" >
+        <activity
+            android:name=".DetailedActivity" />
+        <activity android:name=".PanierActivity" />
         <activity android:name=".Home" />
-        <activity android:name=".ForgetPass" />
         <activity android:name=".Singup" />
+
         <activity
             android:name=".MainActivity"
-            tools:ignore="DuplicateActivity">
+            android:exported="true"
+            tools:ignore="DuplicateActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,15 +1,18 @@
 package com.example.projetintegration;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -70,22 +73,27 @@ public class HomeFragment extends Fragment {
         RecyclerView myrecy;
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
-        ArrayList<Product> products;
+        ArrayList<ProductModel> products;
         ProductAdapter productAdapter;
-        products = new ArrayList<Product>();
+        products = new ArrayList<ProductModel>();
 
-       
-        Product p1 = new Product("Sweat à Capuche - Noir - Hunter X Hunter",400,R.drawable.tshirt);
-        Product p2 = new Product("Sweat à Capuche - Noir - Hunter X Hunter",400,R.drawable.tshirt);
-        Product p3 = new Product("Sweat à Capuche - Noir - Hunter X Hunter",400,R.drawable.tshirt);
-        Product p4 = new Product("Sweat à Capuche - Noir - Hunter X Hunter",400,R.drawable.tshirt);
+        ImageView img;
+
+
+        ProductModel p1 = new ProductModel("Sweat à Capuche",400,R.drawable.manteau);
+        ProductModel p2 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
+        ProductModel p3 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
+        ProductModel p4 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
         Context context;
         products.add(p1);
         products.add(p2);
         products.add(p3);
         products.add(p4);
          myrecy = rootView.findViewById(R.id.recl);
-        myrecy.setLayoutManager(new LinearLayoutManager(rootView.getContext()));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
+        myrecy.setLayoutManager(gridLayoutManager);
+        myrecy.setHasFixedSize(true);
+
         productAdapter = new ProductAdapter(products, rootView.getContext());
         myrecy.setAdapter(productAdapter);
         return rootView;

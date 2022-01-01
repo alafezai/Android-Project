@@ -2,16 +2,11 @@ package com.example.projetintegration;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
-
-import java.util.ArrayList;
 
 public class Home extends AppCompatActivity {
     MeowBottomNavigation bottomNavigation;
@@ -24,9 +19,8 @@ public class Home extends AppCompatActivity {
         bottomNavigation = findViewById(R.id.bottom_navigation);
         bottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.home));
         bottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.setting));
-        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.setting));
-        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.accont));
-        bottomNavigation.add(new MeowBottomNavigation.Model(5,R.drawable.ic_baseline_shopping_cart_24));
+        bottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.accont));
+        bottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.ic_baseline_shopping_cart_24));
         bottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
             @Override
             public void onShowItem(MeowBottomNavigation.Model item) {
@@ -36,15 +30,12 @@ public class Home extends AppCompatActivity {
                         fragment = new  HomeFragment();
                         break;
                     case 2:
-                        fragment  = new SettingFragment();
-                        break;
-                    case 3:
                         fragment = new CategorieFragment();
                         break;
-                    case 4:
-                        fragment = new ProfilFragment();
+                    case 3:
+                        fragment = new ProfileFragment();
                         break;
-                    case 5:
+                    case 4:
                         startActivity(new Intent(getApplicationContext(),PanierActivity.class));
                         break;
 

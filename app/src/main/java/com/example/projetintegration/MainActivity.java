@@ -20,10 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(inte);
     }
 
-    public void onClick2(View view){
-        Intent inte = new Intent(getApplicationContext(),ForgetPass.class);
-        startActivity(inte);
-    }
+
 
     public void onClickHome(View view){
         Intent inte = new Intent(getApplicationContext(),Home.class);

@@ -1,6 +1,6 @@
 package com.example.projetintegration;
 
-public class Product {
+public class ProductModel {
 
     String description;
     double price;
@@ -28,7 +28,7 @@ public class Product {
     }
 
 
-    public Product(String description, double price,Integer image){
+    public ProductModel(String description, double price, Integer image){
         this.description = description;
         this.price = price;
         this.image = image;

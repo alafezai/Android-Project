@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -18,10 +19,10 @@ public class PanierActivity extends AppCompatActivity {
         setContentView(R.layout.activity_panier);
         PanierAdapter productAdapter;
         products = new ArrayList<productPanier>();
-        productPanier p1 = new productPanier("100" ,"100",R.drawable.tshirt,"Sweat à Capuche");
-        productPanier p2 = new productPanier("100" ,"100",R.drawable.tshirt,"Sweat à Capuche");
-        productPanier p3 = new productPanier("100" ,"100",R.drawable.tshirt,"Sweat à Capuche");
-        productPanier p4 = new productPanier("100" ,"100",R.drawable.tshirt,"Sweat à Capuche");
+        productPanier p1 = new productPanier("100" ,"100",R.drawable.p0,"Sweat à Capuche");
+        productPanier p2 = new productPanier("100" ,"100",R.drawable.p0,"Sweat à Capuche");
+        productPanier p3 = new productPanier("100" ,"100",R.drawable.p0,"Sweat à Capuche");
+        productPanier p4 = new productPanier("100" ,"100",R.drawable.p0,"Sweat à Capuche");
         products.add(p1);
         products.add(p2);
         products.add(p3);

@@ -4,99 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="20dp"
-    android:layout_marginLeft="20dp"
+    android:layout_marginStart="2dp"
+    android:layout_marginLeft="0dp"
     android:layout_marginBottom="30dp"
     android:background="@drawable/roundproduct">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="371dp"
-        android:layout_height="175dp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:background="#DAD8D8"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="23dp"
-        tools:layout_editor_absoluteY="15dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
         >
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#ECE7E7">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            >
 
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginTop="9dp"
-                android:layout_marginEnd="17dp"
-                android:layout_marginRight="17dp"
-                android:layout_marginBottom="9dp"
-                android:scaleType="fitXY"
-                android:src="@drawable/tshirt"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/price"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:id="@+id/product_image"
+                android:layout_width="180dp"
+                android:layout_height="250dp"
+                android:src="@drawable/manteau"
+
+                />
 
             <TextView
-                android:id="@+id/textView7"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginEnd="42dp"
-                android:layout_marginRight="42dp"
-                android:text="-50%"
-                app:layout_constraintBottom_toBottomOf="@+id/desc"
-                app:layout_constraintEnd_toStartOf="@+id/desc"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/desc"
-                android:layout_width="209dp"
-                android:layout_height="57dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="22dp"
-                android:text="TextView"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/price"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/price"
+                android:id="@+id/product_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginBottom="57dp"
-                android:text="TextView"
-                android:textColor="#090909"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/details"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                app:layout_constraintTop_toBottomOf="@+id/desc" />
+                android:textSize="17dp"
+                android:fontFamily="sans-serif-light"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="27dp"
+                android:text="Book 1"
+                android:textColor="@color/black"
 
-            <Button
-                android:id="@+id/details"
-                android:layout_width="0dp"
-                android:layout_height="52dp"
-                android:layout_marginEnd="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginBottom="29dp"
-                android:background="@drawable/roundproduct"
-                android:text="Details"
-                app:backgroundTint="#179AD5"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/price" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="sans-serif-light"
+                android:text="Price"
+                android:textSize="14dp"
+                android:textStyle="normal"
+
+                />
+
+            <TextView
+                android:id="@+id/aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:fontFamily="sans-serif-light"
+                android:textStyle="normal"
+                android:layout_margin="8dp"
+                android:textColor="#01B6AE"
+                android:text="Rating"
+                />
+
+
+            <TextView
+                android:id="@+id/all_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:layout_marginTop="-28dp"
+                android:layout_marginLeft="110dp"
+                android:textColor="#01B6AE"
+                />
+
+
+        </LinearLayout>
+
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
