@@ -10,13 +10,16 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/usernane"
         android:layout_width="224dp"
         android:layout_height="63dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:hint="Username"
         tools:layout_marginTop="50dp" />
+
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passs"
         android:layout_width="224dp"
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
@@ -25,6 +28,7 @@
         tools:layout_marginTop="40dp" />
 
     <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/cpasss"
         android:layout_width="224dp"
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
@@ -52,7 +56,8 @@
         android:text="Sing up"
         app:backgroundTint="#1566E0"
         app:cornerRadius="100dp"
-        tools:layout_marginBottom="30dp" />
+        tools:layout_marginBottom="30dp"
+        android:onClick="onClick"/>
 
 
     <LinearLayout
