@@ -13,6 +13,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -70,11 +82,10 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        RecyclerView myrecy;
+
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
         // Inflate the layout for this fragment
         ArrayList<ProductModel> products;
-        ProductAdapter productAdapter;
         products = new ArrayList<ProductModel>();
 
         ImageView img;
@@ -84,22 +95,128 @@ public class HomeFragment extends Fragment {
         ProductModel p2 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
         ProductModel p3 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);
         ProductModel p4 = new ProductModel("Sweat à Capuche ",400,R.drawable.manteau);*/
-        Context context;
      /*   products.add(p1);
         products.add(p2);
         products.add(p3);
         products.add(p4);*/
 
 
-         myrecy = rootView.findViewById(R.id.recl);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
-        myrecy.setLayoutManager(gridLayoutManager);
-        myrecy.setHasFixedSize(true);
 
-        productAdapter = new ProductAdapter(products, rootView.getContext());
-        myrecy.setAdapter(productAdapter);
+
+
+
+
+
+
+
+
+
+        StringRequest stringRequest = new
+                StringRequest(Request.Method.GET,"http://10.0.2.2:8084/Products", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                JSONArray array = null;
+                //SimpleDateFormat record_timestamp = new SimpleDateFormat();
+                try {
+                    array = new JSONArray(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+                for(int i =0;i<array.length();i++){
+                    JSONObject object = null;
+                    try {
+                        object = array.getJSONObject(i);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    String name = "";
+                    try {
+                        name = object.getString("name");
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    String description = "";
+                    try {
+                        description = object.getString("description");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    double price = 0;
+                    try {
+                        price = object.getDouble("price");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    String imagep = "";
+                    try {
+                        imagep = object.getString("imagep");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    int rating = 0;
+                    try {
+                        rating = object.getInt("rating");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    // String datec ;
+                           /* Long datec = null;
+                                Long datec = null;
+                            try {
+                                datec = object.getLong("datecreation");
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }*/
+
+                    //Date date = new Date(datec);
+                    //Date a = Date.valueOf(datec);
+                    // String description, double price, Integer image,String name,Integer rating){
+                    ProductModel pm = new ProductModel(description,price,imagep,name,rating);
+                    products.add(pm);
+
+                }
+               /* RecyclerView myrecy = findViewById(R.id.ry);
+                myrecy.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+                customeradapter =new customeradapter(ar,getApplicationContext());
+                myrecy.setAdapter(customeradapter);*/
+                RecyclerView myrecy;
+                ProductAdapter productAdapter;
+                myrecy = rootView.findViewById(R.id.recl);
+                GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL,false);
+                myrecy.setLayoutManager(gridLayoutManager);
+                myrecy.setHasFixedSize(true);
+
+                System.out.println("jawou bhy");
+                productAdapter = new ProductAdapter(products, rootView.getContext());
+                myrecy.setAdapter(productAdapter);
+            }
+        },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+
+                        System.out.println("l3assba");
+                    }
+                });
+        Volley.newRequestQueue(getContext()).add(stringRequest);
+
         return rootView;
+
     }
+
+
+
+
+
 
 
 }

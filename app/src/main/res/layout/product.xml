@@ -59,17 +59,29 @@
 
                 />
 
-            <TextView
-                android:id="@+id/aa"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12dp"
-                android:fontFamily="sans-serif-light"
-                android:textStyle="normal"
-                android:layout_margin="8dp"
-                android:textColor="#01B6AE"
-                android:text="Rating"
-                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Rating"
+                    android:textColor="#01B6AE"
+                    android:textSize="12dp"
+                    android:textStyle="normal" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="22dp"
+                    app:srcCompat="@drawable/star" />
+
+            </LinearLayout>
 
 
             <TextView

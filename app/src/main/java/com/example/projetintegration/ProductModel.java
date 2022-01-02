@@ -7,7 +7,7 @@ public class ProductModel {
     int rating;
     String description;
     double price;
-    Integer image;
+    String image;
 
 
     public int getRating() {
@@ -33,7 +33,7 @@ public class ProductModel {
     public  double getPrice(){
         return  this.price;
     }
-    public Integer getImage(){
+    public String getImage(){
         return  this.image;
     }
 
@@ -45,12 +45,12 @@ public class ProductModel {
         this.price = price;
     }
 
-    public void setImage(Integer image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
 
-    public ProductModel(String description, double price, Integer image,String name,Integer rating){
+    public ProductModel(String description, double price, String image,String name,int rating){
         this.description = description;
         this.price = price;
         this.image = image;
