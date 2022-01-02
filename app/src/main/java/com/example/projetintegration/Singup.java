@@ -51,7 +51,7 @@ public class Singup extends AppCompatActivity implements View.OnClickListener {
 
 
     public void register(String usern,String pass ,String cpass) throws JSONException {
-        String postUrl = "http://10.0.2.2:8084/register";
+        String postUrl = "http://192.168.56.1:8084/register";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
         JSONObject postData = new JSONObject();

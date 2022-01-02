@@ -13,7 +13,6 @@
         android:theme="@style/Theme.ProjetIntegration" >
         <activity
             android:name=".DetailedActivity" />
-        <activity android:name=".PanierActivity" />
         <activity android:name=".Home" />
         <activity android:name=".Singup" />
 

@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.rcyview>{
@@ -25,7 +27,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.rcyview>
             super(view);
             descr = view.findViewById(R.id.product_name);
             price = view.findViewById(R.id.product_price);
-           // image = view.findViewById(R.id.product_image);
+           image = view.findViewById(R.id.product_image);
 
             rating = view.findViewById(R.id.rating);
 
@@ -47,11 +49,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.rcyview>
 
     @Override
     public void onBindViewHolder(@NonNull rcyview holder, @SuppressLint("RecyclerView") int position) {
-holder.descr.setText(products.get(position).getName());
-holder.price.setText(String.valueOf(products.get(position).getPrice())+" TND");
-//holder.image.setImageResource(products.get(position).getImage());
+         holder.descr.setText(products.get(position).getName());
+         holder.price.setText(String.valueOf(products.get(position).getPrice())+" TND");
+         Glide.with(contex).load(products.get(position).getImage()).into(holder.image);
 
-        holder.rating.setText(String.valueOf(products.get(position).getRating()));
+        holder.rating.setText("Rating: "+String.valueOf(products.get(position).getRating()));
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +64,8 @@ holder.price.setText(String.valueOf(products.get(position).getPrice())+" TND");
                 i.putExtra("priceprod",String.valueOf(products.get(position).getPrice()));
                 i.putExtra("ratingprod",String.valueOf(products.get(position).getRating()));
                 i.putExtra("desc",String.valueOf(products.get(position).getDescription()));
+                i.putExtra("image",(products.get(position).getImage()));
+
                 v.getContext().startActivity(i);
             }
         });

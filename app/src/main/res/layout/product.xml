@@ -10,7 +10,7 @@
     >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_margin="7dp"
         app:cardCornerRadius="8dp"
@@ -40,7 +40,7 @@
                 android:textSize="17dp"
                 android:fontFamily="sans-serif-light"
                 android:layout_marginTop="15dp"
-                android:layout_marginLeft="27dp"
+                android:layout_marginLeft="50dp"
                 android:text="Book 1"
                 android:textColor="@color/black"
 
@@ -71,12 +71,13 @@
                     android:layout_margin="8dp"
                     android:fontFamily="sans-serif-light"
                     android:text="Rating"
-                    android:textColor="#01B6AE"
-                    android:textSize="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="13dp"
                     android:textStyle="normal" />
 
                 <ImageView
                     android:id="@+id/imageView"
+                    android:layout_marginTop="7dp"
                     android:layout_width="19dp"
                     android:layout_height="22dp"
                     app:srcCompat="@drawable/star" />

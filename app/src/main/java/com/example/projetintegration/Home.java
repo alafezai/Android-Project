@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity {
                         fragment = new ProfileFragment();
                         break;
                     case 4:
-                        startActivity(new Intent(getApplicationContext(),PanierActivity.class));
+                        fragment = new PanierFragment();
                         break;
 
                 }

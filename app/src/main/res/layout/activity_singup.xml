@@ -16,6 +16,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:hint="Username"
+        android:textColor="@color/black"
         tools:layout_marginTop="50dp" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -25,6 +26,8 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:hint="Password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
         tools:layout_marginTop="40dp" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -33,14 +36,9 @@
         android:layout_height="60dp"
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
-        android:hint="Confirmer Password"
-        tools:layout_marginTop="40dp" />
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="224dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:hint="Phone"
+        android:hint="Confirm Password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
         tools:layout_marginTop="40dp" />
 
 

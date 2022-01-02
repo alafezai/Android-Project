@@ -112,7 +112,7 @@ public class HomeFragment extends Fragment {
 
 
         StringRequest stringRequest = new
-                StringRequest(Request.Method.GET,"http://10.0.2.2:8084/Products", new Response.Listener<String>() {
+                StringRequest(Request.Method.GET,"http://192.168.56.1:8084/Products", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 JSONArray array = null;

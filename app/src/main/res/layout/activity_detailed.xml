@@ -24,7 +24,7 @@
         android:id="@+id/detailed_img"
         android:layout_width="220dp"
         android:layout_height="300dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="76dp"
         android:background="@drawable/manteau"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"

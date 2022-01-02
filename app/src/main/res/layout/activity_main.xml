@@ -15,6 +15,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:hint="Username"
+        android:textColor="@color/black"
         tools:layout_marginTop="50dp" />
 
     <com.google.android.material.textfield.TextInputEditText
@@ -23,6 +24,8 @@
         android:layout_marginStart="80dp"
         android:layout_marginLeft="80dp"
         android:hint="Password"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
         tools:layout_marginTop="40dp" />
 
 
